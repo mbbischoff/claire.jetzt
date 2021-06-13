@@ -1,13 +1,11 @@
 /* DEFINITIONS */
 /* VARIABLES */
-/* var(--link-accent-color) */
 :root {
-  --action-color: #000000;
-  --primary-accent-color: #FBD900;
-  --primary-background-color: #FFFFFF;
+  --primary-accent-color: #FEDB00;
+  --secondary-accent-color: #440099;
 }
 
-/* WEBSITE */
+/* STRUCTURE */
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -15,7 +13,7 @@
 }
 
 body {
-  background: var(--primary-background-color);
+  background: #FFFFFF;
 }
 
 #housing {
@@ -36,7 +34,7 @@ header {
     height: 100px;
     margin-bottom: 40px;
     margin-top: 10px;
-    width: auto;
+    width: 100px;
 }
 
 #content {
@@ -52,8 +50,8 @@ header {
 }
 
 /* TYPOGRAPHY */
-*, blockquote, label, div, h3, ul, li, p, a {
-  font-family: 'IBM Plex Sans', sans-serif;
+blockquote, label, div, h3, ul, li, p, a {
+  font-family: 'IBM Plex Serif', serif;
 }
 
 h1, h2 {
@@ -62,6 +60,10 @@ h1, h2 {
 
 code {
   font-family: 'IBM Plex Mono', monospace;
+}
+
+.emphasis {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 h1 {
@@ -139,19 +141,13 @@ li.alt {
 }
 
 a {
-  color: var(--action-color);
-  /*text-decoration: underline;*/
-	text-decoration: none;
+  color: var(--secondary-accent-color);
+  text-decoration: underline;
 }
 
 img {
   margin: 25px, 25px, 25px, 25px;
-}
-
-h2 icon {
-  vertical-align: top !important;
-  float: right;
-}
+}]
 
 icon {
   color: inherit;
@@ -171,16 +167,14 @@ div.code {
 	padding-bottom: 5px;
 }
 
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
-
 .highlight {
-  color: var(--action-color);
+  background-color: var(--primary-accent-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.emphasis {
+  color: var(--secondary-accent-color);
   font-weight: bold;
   text-decoration: none;
 }
@@ -242,7 +236,7 @@ iframe {
 .button {
   background: none;
   border: 1px black solid;
-  color: var(--action-color);
+  color: var(--secondary-accent-color);
   cursor: pointer;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
@@ -253,10 +247,9 @@ iframe {
   width: 100px;
 }
 
-.privacy {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  line-height: 1.2;
+/* SPECIAL CASES */
+emoji {
+  font-style: normal !important;
 }
 
 /* PAGES */
@@ -268,16 +261,13 @@ iframe {
     margin-top: 50px;
     width: auto;
   }
-
   .header {
     width: 100%;
   }
-
   #content {
     margin-left: 50px;
     margin-right: 50px;
   }
-
   h1 {
     line-height: .8;
   }
@@ -290,12 +280,10 @@ iframe {
     margin-top: 25px;
     width: auto;
   }
-
   #content {
     margin-left: 25px;
     margin-right: 25px;
   }
-
   h1 {
     font-size: 70px;
   }
@@ -306,7 +294,6 @@ iframe {
     margin-left: 0;
     margin-right: 0;
   }
-
   h1 {
     font-size: 60px;
   }
@@ -316,7 +303,6 @@ iframe {
   h1 {
     font-size: 50px;
   }
-
   h2 {
     font-size: 35px;
   }
@@ -329,7 +315,6 @@ iframe {
     padding-top: 5px;
     width: 100%;
   }
-
   h2 {
     font-size: 30px;
   }
@@ -343,23 +328,7 @@ iframe {
   }
 }
 
-/* SPECIAL CASES */
-.defaulthidden {
-  display: none;
-}
-
-icon.material-icons {
-  vertical-align: middle;
-}
-
-icon.data-feather {
-  vertical-align: middle;
-}
-
-emoji {
-  font-style: normal !important;
-}
-
+/*
 span.rainbow {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -381,17 +350,17 @@ separator.rainbow {
   background: linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 2500% 2500%;
 }
+*/
 
 /* ANIMATIONS */
+/*
 @-webkit-keyframes rainbow {
   0% {
     background-position: 0% 82%;
   }
-
   50% {
     background-position: 100% 19%;
   }
-
   100% {
     background-position: 0% 82%;
   }
@@ -401,11 +370,9 @@ separator.rainbow {
   0% {
     background-position: 0% 82%;
   }
-
   50% {
     background-position: 100% 19%;
   }
-
   100% {
     background-position: 0% 82%;
   }
@@ -415,11 +382,9 @@ separator.rainbow {
   0% {
     background-position: 0% 82%;
   }
-
   50% {
     background-position: 100% 19%;
   }
-
   100% {
     background-position: 0% 82%;
   }
@@ -429,12 +394,11 @@ separator.rainbow {
   0% {
     background-position: 0% 82%;
   }
-
   50% {
     background-position: 100% 19%;
   }
-
   100% {
     background-position: 0% 82%;
   }
+  */
 }

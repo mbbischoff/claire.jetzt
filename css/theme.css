@@ -45,10 +45,6 @@ header {
   width: auto;
 }
 
-#greeting {
-  line-height: .65;
-}
-
 /* TYPOGRAPHY */
 blockquote, label, div, h3, ul, li, p, a {
   font-family: 'IBM Plex Serif', serif;
@@ -68,7 +64,7 @@ code {
 
 h1 {
   font-size: 80px;
-  line-height: .8;
+  line-height: 1;
   margin-bottom: 30px;
 }
 
@@ -110,18 +106,6 @@ ul.none {
   margin-left: 0px;
 }
 
-column {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-}
-
-row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
 row > span, row > a {
 	padding-right: 10px;
 }
@@ -147,7 +131,7 @@ a {
 
 img {
   margin: 25px, 25px, 25px, 25px;
-}]
+}
 
 icon {
   color: inherit;
@@ -247,11 +231,6 @@ iframe {
   width: 100px;
 }
 
-/* SPECIAL CASES */
-emoji {
-  font-style: normal !important;
-}
-
 /* PAGES */
 /* RESPONSIVE SCALING */
 @media only screen and (max-width: 1200px) {
@@ -267,9 +246,6 @@ emoji {
   #content {
     margin-left: 50px;
     margin-right: 50px;
-  }
-  h1 {
-    line-height: .8;
   }
 }
 
@@ -302,6 +278,7 @@ emoji {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 50px;
+    line-height: 1.2;
   }
   h2 {
     font-size: 35px;
@@ -326,6 +303,11 @@ emoji {
     margin-bottom: 0px;
     padding-bottom: 0px;
   }
+}
+
+/* SPECIAL CASES */
+emoji {
+  font-style: normal !important;
 }
 
 /*
@@ -400,5 +382,5 @@ separator.rainbow {
   100% {
     background-position: 0% 82%;
   }
-  */
 }
+*/

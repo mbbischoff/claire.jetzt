@@ -8,29 +8,34 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --txt-color: black;
+    --bg-color: white;
     --highlight-bg-color: var(--yellow);
     --emphasis-txt-color: var(--violet);
     --a-txt-color: var(--violet);
-    --button-txt-color: var(--violet);
-    --separator-bg-color: black;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --txt-color: white;
+    --bg-color: #121212;
     --highlight-txt-color: var(--yellow);
     --emphasis-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
-    --button-txt-color: var(--yellow);
-    --separator-bg-color: white;
   }
 }
 
 /* STRUCTURE */
 * {
+  color: var(--txt-color);
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  background: var(--bg-color);
 }
 
 #housing {
@@ -206,7 +211,7 @@ div.code {
 }
 
 separator {
-  background: var(--separator-bg-color);
+  background: var(--txt-color);
   display: block;
   height: 10px;
   margin-bottom: 40px;
@@ -239,7 +244,7 @@ iframe {
 .button {
   background: none;
   border: 1px black solid;
-  color: var(--button-txt-color);
+  color: var(--a-txt-color);
   cursor: pointer;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;

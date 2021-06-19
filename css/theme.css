@@ -1,8 +1,29 @@
 /* DEFINITIONS */
 /* VARIABLES */
 :root {
-  --primary-accent-color: #FEDB00;
-  --secondary-accent-color: #440099;
+  color-scheme: light dark;
+  --yellow: #FEDB00;
+  --violet: #440099;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --highlight-bg-color: var(--yellow);
+    --emphasis-txt-color: var(--violet);
+    --a-txt-color: var(--violet);
+    --button-txt-color: var(--violet);
+    --separator-bg-color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --highlight-txt-color: var(--yellow);
+    --emphasis-bg-color: var(--violet);
+    --a-txt-color: var(--yellow);
+    --button-txt-color: var(--yellow);
+    --separator-bg-color: white;
+  }
 }
 
 /* STRUCTURE */
@@ -10,10 +31,6 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-}
-
-body {
-  background: #FFFFFF;
 }
 
 #housing {
@@ -29,7 +46,7 @@ body {
 }
 
 header {
-    background: var(--primary-accent-color);
+    background: var(--yellow);
     display: block;
     height: 100px;
     margin-bottom: 40px;
@@ -125,7 +142,7 @@ li.alt {
 }
 
 a {
-  color: var(--secondary-accent-color);
+  color: var(--a-txt-color);
   text-decoration: underline;
 }
 
@@ -152,13 +169,15 @@ div.code {
 }
 
 .highlight {
-  background-color: var(--primary-accent-color);
+  color: var(--highlight-txt-color);
+  background-color: var(--highlight-bg-color);
   font-weight: bold;
   text-decoration: none;
 }
 
 .emphasis {
-  color: var(--secondary-accent-color);
+  color: var(--emphasis-txt-color);
+  background-color: var(--emphasis-bg-color);
   font-weight: bold;
   text-decoration: none;
 }
@@ -187,7 +206,7 @@ div.code {
 }
 
 separator {
-  background: black;
+  background: var(--separator-bg-color);
   display: block;
   height: 10px;
   margin-bottom: 40px;
@@ -220,7 +239,7 @@ iframe {
 .button {
   background: none;
   border: 1px black solid;
-  color: var(--secondary-accent-color);
+  color: var(--button-txt-color);
   cursor: pointer;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;

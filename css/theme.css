@@ -68,20 +68,21 @@ header {
 }
 
 /* TYPOGRAPHY */
-blockquote, label, div, h3, ul, li, p, a {
-  font-family: 'IBM Plex Serif', serif;
+/* https://github.com/IBM/plex */
+h1, h2, .emphasis {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-h1, h2 {
-  font-family: 'IBM Plex Sans', sans-serif;
+blockquote, label, div, h3, ul, li, p, a {
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
 }
+
+/*
+  font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+*/
 
 code {
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-.emphasis {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 }
 
 h1 {

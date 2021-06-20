@@ -22,5 +22,5 @@ $(document).ready( function() {
 		/*Unknown*/
 		/*Leave Default*/
 	}
-	document.getElementById('greeting').innerHTML = greeting;
+	$('#greeting').html(greeting);
 });

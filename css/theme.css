@@ -189,6 +189,10 @@ div.code {
   text-decoration: none;
 }
 
+a.emphasis {
+  text-decoration: underline;
+}
+
 .note, .date {
   font-size: 11px;
   letter-spacing: -1px;

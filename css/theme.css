@@ -1,10 +1,14 @@
+/* IMPORTS */
+@import url('https://rsms.me/inter/inter.css');
+/*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');*/
+
 /* DEFINITIONS */
-/* VARIABLES */
 :root {
   color-scheme: light dark;
   --yellow: #FEDB00;
   --violet: #440099;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -29,21 +33,14 @@
 /* STRUCTURE */
 * {
   color: var(--txt-color);
-  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   font-display: swap;
+  cursor: url('~/cursor.png'), auto;
 }
 
 body {
   background: var(--bg-color);
-}
-
-#housing {
-  margin-left: 100px;
-  margin-right: auto;
-  margin-top: 100px;
-  width: 1000px;
 }
 
 #title {
@@ -52,38 +49,40 @@ body {
 }
 
 header {
-    background: var(--yellow);
-    display: block;
-    height: 100px;
-    margin-bottom: 40px;
-    margin-top: 10px;
-    width: 100px;
+  background: var(--yellow);
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 40px;
 }
 
 #content {
-	display: flex;
-	flex-direction: column;
-  margin-left: 100px;
-  margin-right: 100px;
   width: auto;
+  max-width: 1000px;
+  margin: 100px;
+  padding: 100px;
 }
 
 /* TYPOGRAPHY */
-/* https://github.com/IBM/plex */
+:root {
+  font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: 'Inter var', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
 h1, h2, .emphasis {
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
 }
 
 blockquote, label, div, h3, ul, li, p, a {
-  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+
 }
 
-/*
-  font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
-*/
-
 code {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: 'Fira Code', 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 }
 
 h1 {
@@ -96,6 +95,20 @@ h2 {
   font-size: 40px;
   line-height: 1;
   margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+* p:first-of-type::first-line {
+  font-weight: bold;
+}
+
+::first-line {
+
 }
 
 blockquote, label, code, div, ul, li, p, a {
@@ -154,7 +167,8 @@ a {
 }
 
 img {
-  margin: 25px, 25px, 25px, 25px;
+  margin: 10px;
+  padding: 10px;
 }
 
 icon {
@@ -212,7 +226,7 @@ div.code {
   width: auto;
 }
 
-separator {
+hr {
   background: var(--txt-color);
   display: block;
   height: 10px;
@@ -223,68 +237,17 @@ separator {
   width: auto;
 }
 
-/* COMPONENTS*/
-iframe {
-	width: 100%;
-}
-
-.formfield {
-  border: 1px black solid;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-  height: 20px;
-  margin: 5px 0px 5px 0px;
-  padding: 5px 10px 5px 10px;
-  width: 200px;
-}
-
-.checkbox {
-  border: 1px black solid;
-  margin: 10px 10px 10px 0px;
-}
-
-.button {
-  background: none;
-  border: 1px black solid;
-  color: var(--a-txt-color);
-  cursor: pointer;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-  height: 20px;
-  margin: 5px 0px 20px 0px;
-  text-align: left;
-  text-decoration: underline;
-  width: 100px;
-}
-
-/* PAGES */
-/* RESPONSIVE SCALING */
 @media only screen and (max-width: 1200px) {
-  #housing {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    width: auto;
-  }
-  .header {
-    width: 100%;
-  }
   #content {
-    margin-left: 50px;
-    margin-right: 50px;
+    padding: 50px;
+    margin: 50px;
   }
 }
 
 @media only screen and (max-width: 960px) {
-  #housing {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-    width: auto;
-  }
   #content {
-    margin-left: 25px;
-    margin-right: 25px;
+    padding: 25px;
+    margin: 25px;
   }
   h1 {
     font-size: 70px;
@@ -293,15 +256,22 @@ iframe {
 
 @media only screen and (max-width: 800px) {
   #content {
-    margin-left: 0;
-    margin-right: 0;
+    padding: 15px;
+    margin: 15px;
   }
   h1 {
     font-size: 60px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  img {
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    width: auto;
+    float: none !important;
+  }
   h1 {
     font-size: 50px;
     line-height: 1.2;
@@ -312,56 +282,61 @@ iframe {
 }
 
 @media only screen and (max-width: 500px) {
-  img {
-    background-color: black;
-    margin: 5px 0px 15px 0px;
-    padding-top: 5px;
-    width: 100%;
-  }
   h2 {
     font-size: 30px;
   }
-}
-
-/* RESPONSIVE CONTENT */
-@media only screen and (max-width: 1000px) {
-  div.block {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+  h3 {
+    font-size: 20px;
   }
 }
 
-/* SPECIAL CASES */
+
+/* SPECIAL */
 emoji {
   font-style: normal !important;
 }
 
-/*
+.yellow {
+  color: var(--yellow);
+}
+.violet {
+  color: var(--violet);
+}
+
 span.rainbow {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-separator.rainbow {
+@media (prefers-color-scheme: dark) {
+  hr {
+    -webkit-background-clip: block;
+  }
+}
+
+hr.rainbow {
   -webkit-background-clip: block;
 }
 
+/* I don't remember where I originally saw this lovely
+bit of css, but it made me very happy a number of years
+ago, and so here it lives on. Thank you, internet person.
+*/
 .rainbow {
   -o-animation: rainbow 15s ease infinite;
   -webkit-animation: rainbow 15s ease infinite;
   -z-animation: rainbow 15s ease infinite;
   animation: rainbow 15s ease infinite;
-  background: -moz-linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: -o-linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: -webkit-linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background: -moz-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: -o-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: -webkit-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
   background-size: 2500% 2500%;
 }
 */
 
 /* ANIMATIONS */
-/*
 @-webkit-keyframes rainbow {
   0% {
     background-position: 0% 82%;
@@ -409,4 +384,3 @@ separator.rainbow {
     background-position: 0% 82%;
   }
 }
-*/

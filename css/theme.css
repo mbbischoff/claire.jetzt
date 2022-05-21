@@ -52,6 +52,7 @@ header {
   width: auto;
   max-width: 1000px;
   padding: 200px;
+  padding-bottom: 0px;
 }
 
 .header-color-block {
@@ -67,6 +68,7 @@ main {
   width: auto;
   max-width: 1000px;
   padding: 200px;
+  padding-top: 0px;
 }
 
 /* TYPOGRAPHY */

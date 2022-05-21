@@ -15,7 +15,7 @@
     --txt-color: black;
     --bg-color: white;
     --highlight-bg-color: var(--yellow);
-    --emphasis-txt-color: var(--violet);
+    --callout-txt-color: var(--violet);
     --a-txt-color: var(--violet);
   }
 }
@@ -25,7 +25,7 @@
     --txt-color: white;
     --bg-color: #121212;
     --highlight-txt-color: var(--yellow);
-    --emphasis-bg-color: var(--violet);
+    --callout-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
   }
 }
@@ -81,7 +81,7 @@ main {
   }
 }
 
-h1, h2, .emphasis {
+h1, h2, h3, .callout {
   font-weight: bold;
 }
 
@@ -204,9 +204,9 @@ div.code {
   text-decoration: none;
 }
 
-.emphasis {
-  color: var(--emphasis-txt-color);
-  background-color: var(--emphasis-bg-color);
+.callout {
+  color: var(--callout-txt-color);
+  background-color: var(--callout-bg-color);
   font-weight: bold;
   text-decoration: none;
 }

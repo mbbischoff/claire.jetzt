@@ -59,8 +59,7 @@ header {
 #content {
   width: auto;
   max-width: 1000px;
-  margin: 100px;
-  padding: 100px;
+  padding: 200px;
 }
 
 /* TYPOGRAPHY */
@@ -177,8 +176,8 @@ icon {
 
 /* PROPERTIES*/
 div.code {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: var(--txt-color);
+  color: var(--bg-color);
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-top: 10px;
@@ -237,17 +236,21 @@ hr {
   width: auto;
 }
 
+@media only screen and (max-width: 1800px) {
+  #content {
+    padding: 150px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   #content {
-    padding: 50px;
-    margin: 50px;
+    padding: 100px;
   }
 }
 
 @media only screen and (max-width: 960px) {
   #content {
-    padding: 25px;
-    margin: 25px;
+    padding: 50;
   }
   h1 {
     font-size: 70px;
@@ -256,8 +259,7 @@ hr {
 
 @media only screen and (max-width: 800px) {
   #content {
-    padding: 15px;
-    margin: 15px;
+    padding: 25px;
   }
   h1 {
     font-size: 60px;
@@ -265,8 +267,11 @@ hr {
 }
 
 @media only screen and (max-width: 650px) {
+  #content {
+    padding: 15px;
+  }
   img {
-    background-color: black;
+    background-color: var(--txt-color);
     margin: 5px;
     padding: 5px;
     width: auto;

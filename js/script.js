@@ -23,4 +23,11 @@ $(document).ready( function() {
 		/*Leave Default*/
 	}
 	$('#greeting').html(greeting);
+
+	let icons = ['CV','☀','❖','♡','⌘','↪','℅'];
+
+	$('#metro').click(function() {
+		let rand = Math.floor(Math.random() * icons.length);
+		$('#metro').html(icons[rand]);
+	});
 });

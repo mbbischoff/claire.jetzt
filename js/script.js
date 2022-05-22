@@ -1,6 +1,6 @@
 $(document).ready( function() {
 
-	let greeting = "Hello,";
+	let greeting = "Hallo,";
 	let hr = new Date().getHours();
 
 	if(hr >= 6 && hr < 12) {

@@ -24,7 +24,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --txt-color: white;
-    --bg-color: #121212;
+    --bg-color: black;
     --highlight-txt-color: var(--yellow);
     --callout-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
@@ -37,16 +37,11 @@
   margin: 0;
   padding: 0;
   font-display: swap;
-  cursor: url('~/cursor.png'), auto;
+  /*cursor: url('~/cursor.png'), auto;*/
 }
 
 body {
   background: var(--bg-color);
-}
-
-#title {
-	font-weight: bold;
-	font-size: 1.5rem;
 }
 
 header {
@@ -63,11 +58,11 @@ header {
   height: 100px;
   width: 100px;
   margin-bottom: 40px;
-  font-weight:bold;
-  text-align:center;
-  vertical-align:middle;
-  font-size:50px;
-  line-height:100px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50px;
+  line-height: 100px;
 }
 
 main {
@@ -178,6 +173,10 @@ li.alt {
 
 a {
   color: var(--a-txt-color);
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
 }
 

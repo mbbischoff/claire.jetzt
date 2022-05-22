@@ -24,7 +24,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --txt-color: white;
-    --bg-color: #121212;
+    --bg-color: black;
     --highlight-txt-color: var(--yellow);
     --callout-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
@@ -44,11 +44,6 @@ body {
   background: var(--bg-color);
 }
 
-#title {
-	font-weight: bold;
-	font-size: 1.5rem;
-}
-
 header {
   width: auto;
   max-width: 1000px;
@@ -63,11 +58,11 @@ header {
   height: 100px;
   width: 100px;
   margin-bottom: 40px;
-  font-weight:bold;
-  text-align:center;
-  vertical-align:middle;
-  font-size:50px;
-  line-height:100px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50px;
+  line-height: 100px;
 }
 
 main {

@@ -52,7 +52,7 @@ header {
   padding-bottom: 0;
 }
 
-.header-color-block {
+.roundel {
   font-weight: 900;
   border-radius: 50px;
   background: var(--yellow);
@@ -91,7 +91,7 @@ h1, h2 {
 }
 
 h3, .callout {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 blockquote, label, div, h3, ul, li, p, a {
@@ -123,7 +123,7 @@ h3 {
 }
 
 main section:first-of-type p:first-of-type::first-line {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 ::first-line {
@@ -221,6 +221,7 @@ div.code {
 }
 
 .note, .date {
+  font-weight: 200;
   font-size: .66rem;
   letter-spacing: -0.075em;
 }
@@ -301,15 +302,16 @@ hr {
     padding-bottom: 25px;
   }
   img {
-    background-color: var(--txt-color);
-    padding: .33em;
+    /*background-color: var(--txt-color);*/
+    /*padding: .33em;*/
+    border-radius: .33rem;
     max-width: 33%;
     align-self: center;
     float: right !important;
     margin: 0;
     margin-left: .66em;
   }
-  .header-color-block {
+  .roundel {
     height: 50px;
     width: 50px;
     line-height: 50px;

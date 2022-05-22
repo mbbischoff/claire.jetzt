@@ -26,8 +26,8 @@ $(document).ready( function() {
 
 	let icons = ['CV','☀','❖','♡','⌘','↪','℅'];
 
-	$('#metro').click(function() {
+	$('#roundel').click(function() {
 		let rand = Math.floor(Math.random() * icons.length);
-		$('#metro').html(icons[rand]);
+		$('#roundel').html(icons[rand]);
 	});
 });

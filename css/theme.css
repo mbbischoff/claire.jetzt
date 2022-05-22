@@ -1,5 +1,6 @@
 /* IMPORTS */
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400');
 /*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');*/
 
 /* DEFINITIONS */
@@ -52,14 +53,15 @@ header {
 }
 
 .header-color-block {
+  font-weight: 900;
   border-radius: 50px;
   background: var(--yellow);
   display: block;
   height: 100px;
   width: 100px;
   margin-bottom: 40px;
-  font-weight: bold;
   text-align: center;
+  align-self: center;
   vertical-align: middle;
   font-size: 50px;
   line-height: 100px;
@@ -76,24 +78,30 @@ main {
 
 /* TYPOGRAPHY */
 :root {
-  font-family: 'Inter', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
 }
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: 'Inter var', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter var', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
   }
 }
 
-h1, h2, h3, .callout {
-  font-weight: bold;
+h1, h2 {
+  font-weight: 800;
+}
+
+h3, .callout {
+  font-weight: 600;
 }
 
 blockquote, label, div, h3, ul, li, p, a {
-
+  font-weight: 400;
 }
 
 code {
-  font-family: 'Fira Code', 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: 'Fira Code', 'SF Mono', 'Menlo', 'IBM Plex Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-weight: 300;
+  letter-spacing: -1px;
 }
 
 h1 {
@@ -115,7 +123,7 @@ h3 {
 }
 
 main section:first-of-type p:first-of-type::first-line {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 ::first-line {
@@ -140,7 +148,6 @@ blockquote, code {
 code {
 	line-height: 1;
 	margin-bottom: 0;
-  letter-spacing: -1px;
 }
 
 ul {
@@ -202,14 +209,14 @@ div.code {
 .highlight {
   color: var(--highlight-txt-color);
   background-color: var(--highlight-bg-color);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .callout {
   color: var(--callout-txt-color);
   background-color: var(--callout-bg-color);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 

@@ -242,20 +242,35 @@ hr {
 }
 
 @media only screen and (max-width: 1800px) {
+  header {
+    padding: 150px;
+    padding-bottom: 0;
+  }
   main {
     padding: 150px;
+    padding-top: 0;
   }
 }
 
 @media only screen and (max-width: 1200px) {
+  header {
+    padding: 100px;
+    padding-bottom: 0;
+  }
   main {
     padding: 100px;
+    padding-top: 0;
   }
 }
 
 @media only screen and (max-width: 960px) {
+  header {
+    padding: 50px;
+    padding-bottom: 0;
+  }
   main {
-    padding: 50;
+    padding: 50px;
+    padding-top: 0;
   }
   h1 {
     font-size: 70px;
@@ -263,8 +278,13 @@ hr {
 }
 
 @media only screen and (max-width: 800px) {
+  header {
+    padding: 25px;
+    padding-bottom: 0;
+  }
   main {
     padding: 25px;
+    padding-top: 0;
   }
   h1 {
     font-size: 60px;
@@ -272,8 +292,13 @@ hr {
 }
 
 @media only screen and (max-width: 650px) {
+  header {
+    padding: 15px;
+    padding-bottom: 0;
+  }
   main {
     padding: 15px;
+    padding-top: 0;
   }
   img {
     background-color: var(--txt-color);

@@ -19,6 +19,7 @@
     --highlight-bg-color: var(--yellow);
     --callout-txt-color: var(--violet);
     --a-txt-color: var(--violet);
+    --a-ul-color: var(--yellow);
   }
 }
 
@@ -29,6 +30,7 @@
     --highlight-txt-color: var(--yellow);
     --callout-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
+    --a-ul-color: var(--violet);
   }
 }
 
@@ -52,10 +54,16 @@ header {
   padding-bottom: 0;
 }
 
+#roundel {
+  background: var(--yellow);
+}
+#return {
+  background: var(--violet);
+}
+
 .roundel {
   font-weight: 900;
   border-radius: 50px;
-  background: var(--yellow);
   display: block;
   height: 100px;
   width: 100px;
@@ -130,8 +138,12 @@ main section:first-of-type p:first-of-type::first-line {
 
 }
 
-blockquote, label, code, div, ul, li, p, a {
+p {
   font-size: 1rem;
+}
+
+blockquote, label, code, div, ul, li, a {
+  font-size: inherit;
   line-height: 1.25;
   margin-bottom: .66rem;
 }
@@ -187,6 +199,16 @@ a {
 
 a:hover {
   text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--a-ul-color);
+}
+
+.roundel > a, .roundel > a:hover {
+  user-select: none;
+  cursor: wait;
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
 }
 
 img {

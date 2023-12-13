@@ -1,160 +1,219 @@
+/* IMPORTS */
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400');
+/*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');*/
+
 /* DEFINITIONS */
-/* VARIABLES */
 :root {
   color-scheme: light dark;
   --yellow: #FEDB00;
   --violet: #440099;
+  font-size: 15px !important;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
     --txt-color: black;
     --bg-color: white;
     --highlight-bg-color: var(--yellow);
-    --emphasis-txt-color: var(--violet);
+    --callout-txt-color: var(--violet);
     --a-txt-color: var(--violet);
+    --a-ul-color: var(--yellow);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --txt-color: white;
-    --bg-color: #121212;
+    --bg-color: black;
     --highlight-txt-color: var(--yellow);
-    --emphasis-bg-color: var(--violet);
+    --callout-bg-color: var(--violet);
     --a-txt-color: var(--yellow);
+    --a-ul-color: var(--violet);
   }
 }
 
 /* STRUCTURE */
 * {
   color: var(--txt-color);
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-display: swap;
+  /*cursor: url('~/cursor.png'), auto;*/
 }
 
 body {
   background: var(--bg-color);
 }
 
-#housing {
-  margin-left: 100px;
-  margin-right: auto;
-  margin-top: 100px;
-  width: 1000px;
-}
-
-#title {
-	font-weight: bold;
-	font-size: 20px;
-}
-
 header {
-    background: var(--yellow);
-    display: block;
-    height: 100px;
-    margin-bottom: 40px;
-    margin-top: 10px;
-    width: 100px;
+  width: auto;
+  max-width: 1000px;
+  padding: 200px;
+  padding-bottom: 0;
 }
 
-#content {
-	display: flex;
-	flex-direction: column;
-  margin-left: 100px;
-  margin-right: 100px;
+#roundel {
+  background: var(--yellow);
+}
+#return {
+  background: var(--violet);
+}
+
+.roundel {
+  font-weight: 900;
+  border-radius: 50px;
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 40px;
+  text-align: center;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 50px;
+  line-height: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+main {
   width: auto;
+  max-width: 1000px;
+  padding: 200px;
+  padding-top: 0;
 }
 
 /* TYPOGRAPHY */
-/* https://github.com/IBM/plex */
-h1, h2, .emphasis {
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+:root {
+  font-family: 'Inter', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: 'Inter var', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
+  }
+}
+
+h1, h2 {
+  font-weight: 800;
+}
+
+h3, .callout {
+  font-weight: 700;
 }
 
 blockquote, label, div, h3, ul, li, p, a {
-  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  font-weight: 400;
 }
 
-/*
-  font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
-*/
-
 code {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: 'Fira Code', 'SF Mono', 'Menlo', 'IBM Plex Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-weight: 300;
+  letter-spacing: -1px;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 5.5rem;
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: .5em;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: .66rem;
 }
 
-blockquote, label, code, div, ul, li, p, a {
-  font-size: 15px;
+h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: .66rem;
+}
+
+main section:first-of-type p:first-of-type::first-line {
+  font-weight: 600;
+}
+
+::first-line {
+
+}
+
+p {
+  font-size: 1rem;
+}
+
+blockquote, label, code, div, ul, li, a {
+  font-size: inherit;
   line-height: 1.25;
-  margin-bottom: 10px;
+  margin-bottom: .66rem;
 }
 
 blockquote, ul {
-  margin-bottom: 5px;
+  margin-bottom: .33em;
 }
 
 blockquote, code {
   border-left: solid 2px black;
-  margin-left: 15px;
+  margin-left: 1em;
 }
 
 code {
 	line-height: 1;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 
 ul {
-  margin-left: 30px;
+  margin-left: 2em;
 }
 
 ul.alt {
-  margin-left: 15px;
+  margin-left: 1em;
 }
 
 ul.none {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 row > span, row > a {
-	padding-right: 10px;
+	padding-right: .66em;
 }
 
 li {
-  list-style: square;
+  list-style: circle;
 }
 
 li.none {
   list-style: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 li.alt {
   list-style: circle;
-  margin-left: 15px;
+  margin-left: 1em;
 }
 
 a {
   color: var(--a-txt-color);
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--a-ul-color);
+}
+
+.roundel > a, .roundel > a:hover {
+  user-select: none;
+  cursor: wait;
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
 }
 
 img {
-  margin: 25px, 25px, 25px, 25px;
+  margin: 1em;
+  padding: 1em;
 }
 
 icon {
@@ -163,29 +222,23 @@ icon {
 
 /* PROPERTIES*/
 div.code {
-  background-color: #000000;
-  color: #FFFFFF;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+  background-color: var(--txt-color);
+  color: var(--bg-color);
+	margin: .66em;
+  padding: .66em;
 }
 
 .highlight {
   color: var(--highlight-txt-color);
   background-color: var(--highlight-bg-color);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
 
-.emphasis {
-  color: var(--emphasis-txt-color);
-  background-color: var(--emphasis-bg-color);
-  font-weight: bold;
+.callout {
+  color: var(--callout-txt-color);
+  background-color: var(--callout-bg-color);
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -194,8 +247,9 @@ a.emphasis {
 }
 
 .note, .date {
-  font-size: 11px;
-  letter-spacing: -1px;
+  font-weight: 200;
+  font-size: .66rem;
+  letter-spacing: -0.075em;
 }
 
 .note {
@@ -208,164 +262,167 @@ a.emphasis {
 
 .sub {
   list-style: circle;
-  margin-left: 15px;
+  margin-left: 1em;
 }
 
 /* CONTENT */
-#content > div {
+main > div {
   width: auto;
 }
 
-separator {
+hr {
   background: var(--txt-color);
   display: block;
-  height: 10px;
-  margin-bottom: 40px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 15px;
+  height: .66rem;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1rem;
   width: auto;
 }
 
-/* COMPONENTS*/
-iframe {
-	width: 100%;
+@media only screen and (max-width: 1800px) {
+  header {
+    padding: 150px;
+    padding-bottom: 0;
+  }
+  main {
+    padding: 150px;
+    padding-top: 0;
+  }
 }
 
-.formfield {
-  border: 1px black solid;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-  height: 20px;
-  margin: 5px 0px 5px 0px;
-  padding: 5px 10px 5px 10px;
-  width: 200px;
-}
-
-.checkbox {
-  border: 1px black solid;
-  margin: 10px 10px 10px 0px;
-}
-
-.button {
-  background: none;
-  border: 1px black solid;
-  color: var(--a-txt-color);
-  cursor: pointer;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-  height: 20px;
-  margin: 5px 0px 20px 0px;
-  text-align: left;
-  text-decoration: underline;
-  width: 100px;
-}
-
-/* PAGES */
-/* RESPONSIVE SCALING */
 @media only screen and (max-width: 1200px) {
-  #housing {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    width: auto;
+  header {
+    padding: 100px;
+    padding-bottom: 0;
   }
-  .header {
-    width: 100%;
-  }
-  #content {
-    margin-left: 50px;
-    margin-right: 50px;
+  main {
+    padding: 100px;
+    padding-top: 0;
   }
 }
 
 @media only screen and (max-width: 960px) {
-  #housing {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-    width: auto;
+  header {
+    padding: 50px;
+    padding-bottom: 0;
   }
-  #content {
-    margin-left: 25px;
-    margin-right: 25px;
+  main {
+    padding: 50px;
+    padding-top: 0;
   }
   h1 {
-    font-size: 70px;
+    font-size: 4rem;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  #content {
-    margin-left: 0;
-    margin-right: 0;
+  header {
+    padding: 25px;
+    padding-bottom: 0;
+  }
+  main {
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+  img {
+    /*background-color: var(--txt-color);*/
+    /*padding: .33em;*/
+    border-radius: .33rem;
+    max-width: 33%;
+    align-self: center;
+    float: right !important;
+    margin: 0;
+    margin-left: .66em;
+  }
+  .roundel {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 25px;
   }
   h1 {
-    font-size: 60px;
+    font-size: 3;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  header {
+    padding: 15px;
+    padding-bottom: 0;
+  }
+  main {
+    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
   h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
     line-height: 1.2;
   }
   h2 {
-    font-size: 35px;
+    font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  img {
-    background-color: black;
-    margin: 5px 0px 15px 0px;
-    padding-top: 5px;
-    width: 100%;
-  }
   h2 {
-    font-size: 30px;
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
   }
 }
 
-/* RESPONSIVE CONTENT */
-@media only screen and (max-width: 1000px) {
-  div.block {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
-}
 
-/* SPECIAL CASES */
+/* SPECIAL */
 emoji {
   font-style: normal !important;
 }
 
-/*
+.yellow {
+  color: var(--yellow);
+}
+.violet {
+  color: var(--violet);
+}
+
 span.rainbow {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-separator.rainbow {
+@media (prefers-color-scheme: dark) {
+  hr {
+    -webkit-background-clip: block;
+  }
+}
+
+hr.rainbow {
   -webkit-background-clip: block;
 }
 
+/* I don't remember where I originally saw this lovely
+bit of css, but it made me very happy a number of years
+ago, and so here it lives on. Thank you, internet person.
+*/
 .rainbow {
   -o-animation: rainbow 15s ease infinite;
   -webkit-animation: rainbow 15s ease infinite;
   -z-animation: rainbow 15s ease infinite;
   animation: rainbow 15s ease infinite;
-  background: -moz-linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: -o-linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: -webkit-linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  background: linear-gradient(0deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background: -moz-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: -o-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: -webkit-linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
+  background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
   background-size: 2500% 2500%;
 }
 */
 
 /* ANIMATIONS */
-/*
 @-webkit-keyframes rainbow {
   0% {
     background-position: 0% 82%;
@@ -413,4 +470,3 @@ separator.rainbow {
     background-position: 0% 82%;
   }
 }
-*/

@@ -1,6 +1,6 @@
 $(document).ready( function() {
 
-	let greeting = "Hello,";
+	let greeting = "Hallo,";
 	let hr = new Date().getHours();
 
 	if(hr >= 6 && hr < 12) {
@@ -23,4 +23,21 @@ $(document).ready( function() {
 		/*Leave Default*/
 	}
 	$('#greeting').html(greeting);
+
+	let icons = ['CV','☀','❖','♡','⌘','↪','℅'];
+
+	$('#roundel').click(function() {
+		let rand = Math.floor(Math.random() * icons.length);
+		$('#roundel').html(icons[rand]);
+	});
+
+	$(function () {
+		let returntext = ''
+		$('#return').hover(function() {
+			returntext = $('#return').html();
+			$('#return').html('↪');
+		}, function() {
+			$('#return').html(returntext);
+		})
+	});
 });

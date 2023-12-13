@@ -242,6 +242,10 @@ div.code {
   text-decoration: none;
 }
 
+a.emphasis {
+  text-decoration: underline;
+}
+
 .note, .date {
   font-weight: 200;
   font-size: .66rem;

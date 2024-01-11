@@ -26,7 +26,7 @@ $(document).ready( function() {
 
 	let icons = ['CV','☀','❖','♡','⌘','↪','℅'];
 
-	$('#roundel').click(function() {
+	$('#roundel').hover(function() {
 		let rand = Math.floor(Math.random() * icons.length);
 		$('#roundel').html(icons[rand]);
 	});

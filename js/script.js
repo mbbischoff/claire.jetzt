@@ -24,9 +24,9 @@ $(document).ready( function() {
 	}
 	$('#greeting').html(greeting);
 
-	let icons = ['CV','☀','❖','♡','⌘','↪','℅'];
+	let icons = ['CV','☀','♡','⌘','↪','℅'];
 
-	$('#roundel').hover(function() {
+	$('#roundel').mouseover(function() {
 		let rand = Math.floor(Math.random() * icons.length);
 		$('#roundel').html(icons[rand]);
 	});

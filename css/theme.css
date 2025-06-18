@@ -196,6 +196,7 @@ li.alt {
 a {
   color: var(--a-txt-color);
   text-decoration: none;
+  white-space: normal;
 }
 
 a:hover {

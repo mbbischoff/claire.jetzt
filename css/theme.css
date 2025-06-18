@@ -213,8 +213,8 @@ a:hover {
 }
 
 img {
-  margin: 1em;
-  padding: 1em;
+  margin: 1em 0em;
+  padding: 1em 0em;
 }
 
 icon {
@@ -332,11 +332,9 @@ hr {
     /*background-color: var(--txt-color);*/
     /*padding: .33em;*/
     border-radius: .33rem;
-    max-width: 33%;
+    max-width: 66%;
     align-self: center;
-    float: right !important;
     margin: 0;
-    margin-left: .66em;
   }
   .roundel {
     height: 50px;

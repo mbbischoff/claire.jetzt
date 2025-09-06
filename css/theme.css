@@ -142,6 +142,7 @@ main section:first-of-type p:first-of-type::first-line {
 
 p {
   font-size: 1rem;
+  text-wrap: pretty;
 }
 
 blockquote, label, code, div, ul, li, a {

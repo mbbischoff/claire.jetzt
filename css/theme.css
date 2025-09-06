@@ -206,6 +206,7 @@ a:hover {
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--a-ul-color);
+  text-decoration-skip-ink: auto;
 }
 
 a:visited {

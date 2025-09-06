@@ -271,14 +271,6 @@ hr {
 }
 
 @media only screen and (max-width: 960px) {
-  header {
-    padding: 50px;
-    padding-bottom: 0;
-  }
-  main {
-    padding: 50px;
-    padding-top: 0;
-  }
   h1 {
     font-size: 4rem;
   }

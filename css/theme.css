@@ -207,6 +207,10 @@ img {
   padding: 1em 0em;
 }
 
+a > img {
+  cursor: zoom-in;
+}
+
 icon {
   color: inherit;
 }

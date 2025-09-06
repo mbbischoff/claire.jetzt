@@ -334,6 +334,7 @@ emoji {
 span.rainbow {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 0em;
 }
 
 @media (prefers-color-scheme: dark) {

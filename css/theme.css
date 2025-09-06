@@ -97,6 +97,7 @@ main {
 
 h1, h2 {
   font-weight: 800;
+  font-kerning: none;
 }
 
 h3, .callout {

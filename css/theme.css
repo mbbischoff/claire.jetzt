@@ -283,7 +283,7 @@ hr {
   img {
     /*background-color: var(--txt-color);*/
     /*padding: .33em;*/
-    border-radius: .33rem;
+    border-radius: 1rem;
     max-width: 66%;
     align-self: center;
     margin: 0;
@@ -348,7 +348,7 @@ hr.rainbow {
 
 /* I don't remember where I originally saw this lovely
 bit of css, but it made me very happy a number of years
-ago, and so here it lives on. Thank you, internet person.
+ago, and so here it lives on. Thank you, internet.
 */
 .rainbow {
   -o-animation: rainbow 15s ease infinite;
@@ -362,7 +362,6 @@ ago, and so here it lives on. Thank you, internet person.
   background: linear-gradient(0deg, #ff2400, #fedb00, #fedb00, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #440099, #440099);
   background-size: 2500% 2500%;
 }
-*/
 
 /* ANIMATIONS */
 @-webkit-keyframes rainbow {

@@ -1,5 +1,4 @@
 /* IMPORTS */
-@import url('https://rsms.me/inter/inter.css');
 @import url('https://rsms.me/raster/raster2.css');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400');
 
@@ -56,7 +55,7 @@ body {
 }
 
 .roundel {
-  font-weight: 900;
+  font-weight: 900; /* Black */
   border-radius: 50px;
   display: block;
   height: 100px;
@@ -73,30 +72,35 @@ body {
 
 /* TYPOGRAPHY */
 :root {
-  font-family: 'Inter', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: 'Inter var', 'Helvetica Neue', 'IBM Plex Sans', Arial, sans-serif;
+    font-family: 'InterVariable', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   }
 }
 
 h1, h2 {
-  font-weight: 800;
+  font-weight: 800; /* Extra Bold */
+  font-family: 'InterDisplay', 'InterVariable', 'Inter', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+}
+
+#title {
   font-kerning: none;
+  letter-spacing: -0.1rem;
 }
 
 h3, .callout {
-  font-weight: 700;
+  font-weight: 700; /* Bold */
 }
 
 blockquote, label, div, h3, ul, li, p, a {
-  font-weight: 400;
+  font-weight: 400; /* Regular */
 }
 
 code {
   font-family: 'Fira Code', 'SF Mono', 'Menlo', 'IBM Plex Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
-  font-weight: 300;
+  font-weight: 300; /* Light */
   letter-spacing: -1px;
 }
 
@@ -196,7 +200,6 @@ a:visited {
   cursor: wait;
   color: inherit;
   text-decoration: none;
-  font-weight: inherit;
 }
 
 img {
@@ -219,14 +222,12 @@ div.code {
 .highlight {
   color: var(--highlight-txt-color);
   background-color: var(--highlight-bg-color);
-  font-weight: 700;
   text-decoration: none;
 }
 
 .callout {
   color: var(--callout-txt-color);
   background-color: var(--callout-bg-color);
-  font-weight: 700;
   text-decoration: none;
 }
 
@@ -235,9 +236,9 @@ a.emphasis {
 }
 
 .note, .date {
-  font-weight: 200;
+  font-weight: 200; /* Extra Light */
   font-size: .66rem;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.045rem;
 }
 
 .note {

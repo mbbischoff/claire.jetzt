@@ -192,7 +192,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgba(var(--a-txt-color), 0.8);
+  color: var(--a-txt-color);
 }
 
 .roundel > a, .roundel > a:hover {

@@ -47,13 +47,6 @@ body {
   background: var(--bg-color);
 }
 
-header {
-  width: auto;
-  max-width: 1000px;
-  padding: 200px;
-  padding-bottom: 0;
-}
-
 #roundel {
   background: var(--yellow);
   color: black;
@@ -76,13 +69,6 @@ header {
   line-height: 100px;
   cursor: pointer;
   user-select: none;
-}
-
-main {
-  width: auto;
-  max-width: 1000px;
-  padding: 200px;
-  padding-top: 0;
 }
 
 /* TYPOGRAPHY */
@@ -130,14 +116,6 @@ h3 {
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: .66rem;
-}
-
-main section:first-of-type p:first-of-type::first-line {
-  font-weight: 600;
-}
-
-::first-line {
-
 }
 
 p {
@@ -276,10 +254,6 @@ a.emphasis {
 }
 
 /* CONTENT */
-main > div {
-  width: auto;
-}
-
 hr {
   background: var(--txt-color);
   display: block;
@@ -289,28 +263,6 @@ hr {
   margin-right: 0;
   margin-top: 1rem;
   width: auto;
-}
-
-@media only screen and (max-width: 1800px) {
-  header {
-    padding: 150px;
-    padding-bottom: 0;
-  }
-  main {
-    padding: 150px;
-    padding-top: 0;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  header {
-    padding: 100px;
-    padding-bottom: 0;
-  }
-  main {
-    padding: 100px;
-    padding-top: 0;
-  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -328,15 +280,6 @@ hr {
 }
 
 @media only screen and (max-width: 800px) {
-  header {
-    padding: 25px;
-    padding-bottom: 0;
-  }
-  main {
-    padding: 25px;
-    padding-top: 0;
-    padding-bottom: 25px;
-  }
   img {
     /*background-color: var(--txt-color);*/
     /*padding: .33em;*/
@@ -357,15 +300,6 @@ hr {
 }
 
 @media only screen and (max-width: 650px) {
-  header {
-    padding: 15px;
-    padding-bottom: 0;
-  }
-  main {
-    padding: 15px;
-    padding-top: 0;
-    padding-bottom: 50px;
-  }
   h1 {
     font-size: 2.5rem;
     line-height: 1.2;

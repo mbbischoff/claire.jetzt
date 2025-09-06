@@ -202,9 +202,14 @@ a {
 }
 
 a:hover {
+  color: var(--a-ul-color);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--a-ul-color);
+}
+
+a:visited {
+  color: rgba(var(--a-txt-color), 0.8);
 }
 
 .roundel > a, .roundel > a:hover {

@@ -94,7 +94,7 @@ h3, .callout {
   font-weight: 700; /* Bold */
 }
 
-blockquote, label, div, h3, ul, li, p, a {
+blockquote, label, div, h3, ul, li, p {
   font-weight: 400; /* Regular */
 }
 

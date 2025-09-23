@@ -18,12 +18,29 @@ $(document).ready( function() {
 	}
 	$('#greeting').html(greeting);
 
-	let icons = ['CV','☀','♡','⌘','↪','℅','⏻'];
-
-	$('#roundel').mouseover(function() {
+	let icons = [
+		{ icon: 'CV', id: 'cv' },
+		{ icon: '☀', id: 'sun' },
+		{ icon: '♡', id: 'heart' },
+		{ icon: '⌘', id: 'place-of-interest' },
+		{ icon: '↪', id: 'return' },
+		{ icon: '℅', id: 'care-of' },
+		{ icon: '⏻', id: 'power' }
+	];
+	let isHovering = false;
+	
+	$('#roundel').mouseenter(function() {
+		if (isHovering) return; // prevent multiple rapid fires caused by child element
+		isHovering = true;
+		
 		let rand = Math.floor(Math.random() * icons.length);
-		$('#roundel').html(icons[rand]);
+		$('#roundel').html(`<span class="icon-text" id="${icons[rand].id}">${icons[rand].icon}</span>`);
 	});
+	
+	$('#roundel').mouseleave(function() {
+		isHovering = false;
+	});
+
 
 	$(function () {
 		let returntext = ''

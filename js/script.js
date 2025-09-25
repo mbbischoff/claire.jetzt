@@ -40,15 +40,4 @@ $(document).ready( function() {
 	$('#roundel').mouseleave(function() {
 		isHovering = false;
 	});
-
-
-	$(function () {
-		let returntext = ''
-		$('#return').hover(function() {
-			returntext = $('#return').html();
-			$('#return').html('↪');
-		}, function() {
-			$('#return').html(returntext);
-		})
-	});
 });

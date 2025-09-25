@@ -217,6 +217,13 @@ a:visited {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  #power {
+    transform: none;
+  }
+}
+
+
 img {
   margin: 1em 0em;
   padding: 1em 0em;

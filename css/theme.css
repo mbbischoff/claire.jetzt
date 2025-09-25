@@ -7,6 +7,8 @@
   color-scheme: light dark;
   --yellow: #FEDB00;
   --violet: #440099;
+  --font-family-base: 'Inter', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  --font-family-variable: 'InterVariable', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   font-size: 15px !important;
 }
 
@@ -72,11 +74,11 @@ body {
 
 /* TYPOGRAPHY */
 :root {
-  font-family: 'Inter', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: var(--font-family-base);
 }
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: 'InterVariable', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    font-family: var(--font-family-variable);
   }
 }
 
@@ -200,6 +202,21 @@ a:visited {
   cursor: wait;
   color: inherit;
   text-decoration: none;
+}
+
+.icon-text {
+  display: block;
+}
+
+#power {
+  transform: translateY(-2px);
+  font-family: system-ui,  var(--font-family-base);
+}
+
+@supports (font-variation-settings: normal) {
+  #power {
+    font-family: system-ui, var(--font-family-variable);
+  }
 }
 
 img {

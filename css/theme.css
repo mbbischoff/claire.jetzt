@@ -50,10 +50,6 @@ body {
 
 #roundel {
   background: var(--yellow);
-  color: black;
-}
-#return {
-  background: var(--violet);
 }
 
 .roundel {
@@ -76,6 +72,7 @@ body {
 :root {
   font-family: var(--font-family-base);
 }
+
 @supports (font-variation-settings: normal) {
   :root {
     font-family: var(--font-family-variable);
@@ -206,11 +203,12 @@ a:visited {
 
 .icon-text {
   display: block;
+  color: black;
 }
 
 #power {
   transform: translateY(-2px);
-  font-family: system-ui,  var(--font-family-base);
+  font-family: system-ui, var(--font-family-base);
 }
 
 @supports (font-variation-settings: normal) {
